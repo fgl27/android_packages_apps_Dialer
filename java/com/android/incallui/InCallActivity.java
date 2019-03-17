@@ -1570,6 +1570,7 @@ public class InCallActivity extends TransactionSafeFragmentActivity
       }
       return true;
     }
+    if (!InCallPresenter.getInstance().getProximitySensor().displayListener.isDisplayOn) return true;
     return super.dispatchTouchEvent(event);
   }
 

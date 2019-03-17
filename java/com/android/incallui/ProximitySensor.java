@@ -48,7 +48,7 @@ public class ProximitySensor
   private final PowerManager.WakeLock proximityWakeLock;
   private final AudioModeProvider audioModeProvider;
   private final AccelerometerListener accelerometerListener;
-  private final ProximityDisplayListener displayListener;
+  public final ProximityDisplayListener displayListener;
   private int orientation = AccelerometerListener.ORIENTATION_UNKNOWN;
   private boolean uiShowing = false;
   private boolean isPhoneOffhook = false;
@@ -270,7 +270,7 @@ public class ProximitySensor
   public class ProximityDisplayListener implements DisplayListener {
 
     private DisplayManager displayManager;
-    private boolean isDisplayOn = true;
+    public boolean isDisplayOn = true;
 
     ProximityDisplayListener(DisplayManager displayManager) {
       this.displayManager = displayManager;
